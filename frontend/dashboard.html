@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,179 +10,183 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
-<div class="app-wrapper">
+  <div class="app-wrapper">
 
-  <aside class="sidebar">
-    <div class="logo"><i class="bi bi-kanban"></i> FreelancePM</div>
-    <nav>
-      <a href="dashboard.html" class="nav-link active"><i class="bi bi-grid"></i> Dashboard</a>
-      <a href="clients.html" class="nav-link"><i class="bi bi-people"></i> Clients</a>
-      <a href="projects.html" class="nav-link"><i class="bi bi-folder2-open"></i> Projects</a>
-      <a href="tasks.html" class="nav-link"><i class="bi bi-check2-square"></i> Tasks</a>
-      <a href="employees.html" class="nav-link"><i class="bi bi-person-badge"></i> Employees</a>
-      <a href="payments.html" class="nav-link"><i class="bi bi-credit-card"></i> Payments</a>
-      <a href="reports.html" class="nav-link"><i class="bi bi-bar-chart"></i> Reports</a>
-    </nav>
-  </aside>
+    <aside class="sidebar">
+      <div class="logo"><i class="bi bi-kanban"></i> FreelancePM</div>
+      <nav>
+        <a href="dashboard.html" class="nav-link active"><i class="bi bi-grid"></i> Dashboard</a>
+        <a href="clients.html" class="nav-link"><i class="bi bi-people"></i> Clients</a>
+        <a href="projects.html" class="nav-link"><i class="bi bi-folder2-open"></i> Projects</a>
+        <a href="tasks.html" class="nav-link"><i class="bi bi-check2-square"></i> Tasks</a>
+        <a href="employees.html" class="nav-link"><i class="bi bi-person-badge"></i> Employees</a>
+        <a href="payments.html" class="nav-link"><i class="bi bi-credit-card"></i> Payments</a>
+        <a href="reports.html" class="nav-link"><i class="bi bi-bar-chart"></i> Reports</a>
+      </nav>
+    </aside>
 
-  <main class="main-content">
+    <main class="main-content">
 
-    <div class="topbar">
-      <div class="d-flex align-items-center gap-3">
-        <button class="icon-btn mobile-toggle" id="mobileToggle"><i class="bi bi-list"></i></button>
+      <div class="topbar">
+        <div class="d-flex align-items-center gap-3">
+          <button class="icon-btn mobile-toggle" id="mobileToggle"><i class="bi bi-list"></i></button>
 
-        <div class="search-box">
-          <i class="bi bi-search text-secondary"></i>
-          <input type="text" placeholder="Search dashboard...">
-          <span>⌘ K</span>
-        </div>
-      </div>
-
-      <div class="top-actions">
-        <button class="icon-btn"><i class="bi bi-bell"></i></button>
-        <a href="projects.html" class="btn-lime"><i class="bi bi-plus-lg me-1"></i> New Project</a>
-
-        <div class="admin-profile">
-          <div class="avatar">AC</div>
-          <div>
-            <div class="admin-name">Alex Carter</div>
-            <div class="admin-role">Administrator</div>
+          <div class="search-box">
+            <i class="bi bi-search text-secondary"></i>
+            <input type="text" placeholder="Search dashboard...">
+            <span>⌘ K</span>
           </div>
-          <i class="bi bi-chevron-down text-secondary"></i>
-        </div>
-      </div>
-    </div>
-
-    <h1 class="page-title">Dashboard</h1>
-    <p class="page-subtitle">Live overview from Flask backend API.</p>
-
-    <section class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-top">
-          <div>
-            <div class="stat-label">Total Clients</div>
-            <div class="stat-number" id="totalClients">0</div>
-            <div class="stat-trend">From /api/dashboard/stats</div>
-          </div>
-          <div class="stat-icon"><i class="bi bi-people"></i></div>
-        </div>
-      </div>
-
-      <div class="stat-card">
-        <div class="stat-top">
-          <div>
-            <div class="stat-label">Total Projects</div>
-            <div class="stat-number" id="totalProjects">0</div>
-            <div class="stat-trend">Active project records</div>
-          </div>
-          <div class="stat-icon"><i class="bi bi-folder2-open"></i></div>
-        </div>
-      </div>
-
-      <div class="stat-card">
-        <div class="stat-top">
-          <div>
-            <div class="stat-label">Total Tasks</div>
-            <div class="stat-number" id="totalTasks">0</div>
-            <div class="stat-trend">Task management data</div>
-          </div>
-          <div class="stat-icon"><i class="bi bi-check2-square"></i></div>
-        </div>
-      </div>
-
-      <div class="stat-card">
-        <div class="stat-top">
-          <div>
-            <div class="stat-label">Total Revenue</div>
-            <div class="stat-number" id="totalRevenue">$0.00</div>
-            <div class="stat-trend">USD payment summary</div>
-          </div>
-          <div class="stat-icon"><i class="bi bi-currency-dollar"></i></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="dashboard-grid">
-      <div class="panel-card">
-        <div class="d-flex justify-content-between align-items-center mb-3">
-          <div>
-            <h4 class="mb-1">Revenue Analytics</h4>
-            <p class="page-subtitle mb-0">Chart placeholder for future reports.</p>
-          </div>
-          <button class="btn btn-sm btn-dark-custom">Export</button>
         </div>
 
-        <div class="chart-placeholder">
-          <div class="text-center">
-            <i class="bi bi-graph-up-arrow fs-1 text-success"></i>
-            <p class="mt-2 mb-0">Revenue Chart Placeholder</p>
+        <div class="top-actions">
+          <button class="icon-btn"><i class="bi bi-bell"></i></button>
+          <a href="projects.html" class="btn-lime"><i class="bi bi-plus-lg me-1"></i> New Project</a>
+
+          <div class="admin-profile">
+            <div class="avatar">AC</div>
+            <div>
+              <div class="admin-name">Alex Carter</div>
+              <div class="admin-role">Administrator</div>
+            </div>
+            <i class="bi bi-chevron-down text-secondary"></i>
           </div>
         </div>
       </div>
 
-      <div class="panel-card">
-        <h4 class="mb-3">API Status</h4>
+      <h1 class="page-title">Dashboard</h1>
+      <p class="page-subtitle">Overview of clients, projects, revenue, and system activity.</p>
 
-        <div class="activity-item">
-          <strong>Dashboard API</strong>
-          <p>GET /api/dashboard/stats</p>
+      <section class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-top">
+            <div>
+              <div class="stat-label">Total Clients</div>
+              <div class="stat-number" id="totalClients">0</div>
+              <div class="stat-trend">From /api/dashboard/stats</div>
+            </div>
+            <div class="stat-icon"><i class="bi bi-people"></i></div>
+          </div>
         </div>
 
-        <div class="activity-item">
-          <strong>Clients API</strong>
-          <p>GET /api/clients</p>
+        <div class="stat-card">
+          <div class="stat-top">
+            <div>
+              <div class="stat-label">Total Projects</div>
+              <div class="stat-number" id="totalProjects">0</div>
+              <div class="stat-trend">Active project records</div>
+            </div>
+            <div class="stat-icon"><i class="bi bi-folder2-open"></i></div>
+          </div>
         </div>
 
-        <div class="activity-item">
-          <strong>Projects API</strong>
-          <p>GET /api/projects</p>
+        <div class="stat-card">
+          <div class="stat-top">
+            <div>
+              <div class="stat-label">Total Tasks</div>
+              <div class="stat-number" id="totalTasks">0</div>
+              <div class="stat-trend">Task management data</div>
+            </div>
+            <div class="stat-icon"><i class="bi bi-check2-square"></i></div>
+          </div>
         </div>
 
-        <div class="activity-item">
-          <strong>Tasks API</strong>
-          <p>GET /api/tasks</p>
+        <div class="stat-card">
+          <div class="stat-top">
+            <div>
+              <div class="stat-label">Total Revenue</div>
+              <div class="stat-number" id="totalRevenue">$0.00</div>
+              <div class="stat-trend">USD payment summary</div>
+            </div>
+            <div class="stat-icon"><i class="bi bi-currency-dollar"></i></div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="dashboard-grid mt-4">
-      <div class="panel-card">
-        <h4 class="mb-3">Recent Projects</h4>
+      <section class="dashboard-grid">
+        <div class="panel-card">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <div>
+              <h4 class="mb-1">Revenue Analytics</h4>
+              <p class="page-subtitle mb-0">Chart placeholder for future reports.</p>
+            </div>
+            <button class="btn btn-sm btn-dark-custom">Export</button>
+          </div>
 
-        <div class="table-responsive table-card">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Project</th>
-                <th>Client</th>
-                <th>Budget</th>
-                <th>Start Date</th>
-              </tr>
-            </thead>
-            <tbody id="projectsTable"></tbody>
-          </table>
+          <div class="revenue-chart">
+            <div class="chart-bar" style="height: 45%;"><span>Jan</span></div>
+            <div class="chart-bar" style="height: 65%;"><span>Feb</span></div>
+            <div class="chart-bar" style="height: 38%;"><span>Mar</span></div>
+            <div class="chart-bar" style="height: 80%;"><span>Apr</span></div>
+            <div class="chart-bar" style="height: 55%;"><span>May</span></div>
+            <div class="chart-bar" style="height: 90%;"><span>Jun</span></div>
+          </div>
         </div>
-      </div>
 
-      <div class="panel-card">
-        <h4 class="mb-3">Quick Actions</h4>
+        <div class="panel-card">
+          <h4 class="mb-3">API Status</h4>
 
-        <a href="clients.html" class="btn-lime w-100 d-block text-center mb-3">Add Client</a>
-        <a href="projects.html" class="btn-lime w-100 d-block text-center mb-3">Add Project</a>
-        <a href="tasks.html" class="btn-lime w-100 d-block text-center">View Tasks</a>
-      </div>
-    </section>
+          <div class="activity-item">
+            <strong>Dashboard API</strong>
+            <p>GET /api/dashboard/stats</p>
+          </div>
 
-    <footer class="footer">
-      © 2026 Freelance Project & Client Management System
-    </footer>
+          <div class="activity-item">
+            <strong>Clients API</strong>
+            <p>GET /api/clients</p>
+          </div>
 
-  </main>
-</div>
+          <div class="activity-item">
+            <strong>Projects API</strong>
+            <p>GET /api/projects</p>
+          </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/script.js"></script>
+          <div class="activity-item">
+            <strong>Tasks API</strong>
+            <p>GET /api/tasks</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-grid mt-4">
+        <div class="panel-card">
+          <h4 class="mb-3">Recent Projects</h4>
+
+          <div class="table-responsive table-card">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Project</th>
+                  <th>Client</th>
+                  <th>Budget</th>
+                  <th>Start Date</th>
+                </tr>
+              </thead>
+              <tbody id="projectsTable"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="panel-card">
+          <h4 class="mb-3">Quick Actions</h4>
+
+          <a href="clients.html" class="btn-lime w-100 d-block text-center mb-3">Add Client</a>
+          <a href="projects.html" class="btn-lime w-100 d-block text-center mb-3">Add Project</a>
+          <a href="tasks.html" class="btn-lime w-100 d-block text-center">View Tasks</a>
+        </div>
+      </section>
+
+      <footer class="footer">
+        © 2026 Freelance Project & Client Management System
+      </footer>
+
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
+
 </html>

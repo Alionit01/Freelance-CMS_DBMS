@@ -91,10 +91,39 @@ async function loadDashboardStats() {
     const totalTasks = document.getElementById("totalTasks");
     const totalRevenue = document.getElementById("totalRevenue");
 
-    if (totalClients) totalClients.textContent = stats.total_clients || stats.clients || 0;
-    if (totalProjects) totalProjects.textContent = stats.total_projects || stats.projects || 0;
-    if (totalTasks) totalTasks.textContent = stats.total_tasks || stats.tasks || 0;
-    if (totalRevenue) totalRevenue.textContent = formatUSD(stats.total_revenue || stats.revenue || 0);
+    if (totalClients) {
+      totalClients.textContent =
+        stats.total_clients ||
+        stats.clients ||
+        stats.client_count ||
+        0;
+    }
+
+    if (totalProjects) {
+      totalProjects.textContent =
+        stats.total_projects ||
+        stats.projects ||
+        stats.project_count ||
+        0;
+    }
+
+    if (totalTasks) {
+      totalTasks.textContent =
+        stats.total_tasks ||
+        stats.tasks ||
+        stats.task_count ||
+        stats.totalTasks ||
+        0;
+    }
+
+    if (totalRevenue) {
+      totalRevenue.textContent = formatUSD(
+        stats.total_revenue ||
+        stats.revenue ||
+        stats.totalRevenue ||
+        0
+      );
+    }
 
   } catch (error) {
     console.error("Dashboard API Error:", error);
